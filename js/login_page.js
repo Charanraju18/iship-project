@@ -1,4 +1,4 @@
-var lst = [{ name: "charan", email: "charan", password: "charan" }];
+var lst = [{ name: "charan", email: "charanraju@gmail.com", password: "charan" }];
 var loggedin = false;
 function signup() {
   var obj = {};
@@ -7,7 +7,7 @@ function signup() {
   var sign_password = document.getElementsByClassName("password1")[0];
   var sign_cfmpassword = document.getElementsByClassName("password2")[0];
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  const isValid = emailPattern.test(sign_email.value); 
+  const isValid = emailPattern.test(sign_email.value);
   if(!isValid){
     window.alert("Invalid User!");
   }
@@ -95,6 +95,8 @@ function signup_from_login() {
   y.style = "display : block";
 }
 
+
+// var user_loggedin = false;
 function login() {
   var email = document.getElementsByClassName("user_name")[0];
   var password = document.getElementsByClassName("user_password")[0];
@@ -112,22 +114,29 @@ function login() {
         console.log("User Exists");
         var logged = document.getElementsByClassName("logged")[0];
         logged.style = "opacity : 1";
-        setTimeout(() => {
-          (logged.style.opacity = "0"),
-            (logged.style.transition = "all .5s ease");
-        }, 5000);
+        var y = document.getElementsByClassName("home_login")[0];
+        y.style = "display : none";
 
         // var x = document.getElementsByTagName("login_div")[0];
         // x.style =
         //   "background-image: url(https://i.natgeofe.com/n/b9e9b8d1-fa08-4b90-96bb-310cace03847/meenakshi-amman-temple-india.jpg)";
 
-        var y = document.getElementsByClassName("inner_card")[0];
-        y.style = "display : none";
+        // var y = document.getElementsByClassName("home_login")[0];
+        // y.style = "display : none";
         user_found = true;
 
 
-        window.location.href = "../index.html";
+        // window.location.href = "../index.html";
+        var home_page = document.getElementsByClassName("container")[0];
+        home_page.style = "display : block";
 
+        var user_name = document.getElementsByClassName("login-button")[0];
+        user_name.innerHTML = lst[i].name;
+
+        setTimeout(() => {
+          (logged.style.opacity = "0"),
+            (logged.style.transition = "all .5s ease");
+        }, 5000);
 
       } else if (
         (lst[i].name === email.value || lst[i].email === email.value) &&
@@ -144,10 +153,12 @@ function login() {
       err.style = "opacity : 1";
       err.style = "top : auto";
       err.style.transition = "all .5s ease";
+      err.style = "display : block";
     }
   }
   password.value = "";
 }
+
 var c = 0;
 function showpassword() {
   var x = document.getElementsByClassName("user_password")[0];

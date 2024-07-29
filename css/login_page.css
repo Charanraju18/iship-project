@@ -272,8 +272,10 @@ input{
 	/* margin: 0 auto; */
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 	opacity: 1;
-	top: -350px;
+	top: 32.60869%;
+	left: 8.8235%;
 	transition: all .5s ease;
+	display: none;
 }
 .error_div i{
 	/* position: absolute; */
@@ -299,6 +301,8 @@ input{
 	margin: auto;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 	display: none;
+	top: 32.60869%;
+	left: 8.8235%;
 }
 
 .succ_login i{
@@ -354,9 +358,10 @@ input{
 	opacity: .9;
 	margin: auto;
 	display: none;
+	padding-top: 12%;
 }
 .forget_password_div h1{
-	margin: 40px auto;
+	margin: auto;
 	font-weight: normal;
 	width:fit-content;
 	height: fit-content;
@@ -398,7 +403,7 @@ input{
 		background-position: center;
 		background-size: cover;
 		transition: all .6s;
-		
+
 	}
 
 	.inner_card {
