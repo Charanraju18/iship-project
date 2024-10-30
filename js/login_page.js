@@ -1,5 +1,6 @@
 var lst = [{ name: "charan", email: "charanraju@gmail.com", password: "charan" }];
 var loggedin = false;
+
 function signup() {
   var obj = {};
   var sign_name = document.getElementsByClassName("signup_name")[0];
